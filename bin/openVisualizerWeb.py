@@ -211,16 +211,12 @@ class OpenVisualizerWeb(eventBusClient.eventBusClient,Cmd):
         '''
 
         log.info('Toggle root status for moteid {0}'.format(moteid))
-        ms = self.app.getMoteState(moteid)
-        if ms:
-            if log.isEnabledFor(logging.DEBUG):
-                log.debug('Found mote {0} in moteStates'.format(moteid))
-            ms.triggerAction(ms.TRIGGER_DAGROOT)
-            return '{"result" : "success"}'
-        else:
-            if log.isEnabledFor(logging.DEBUG):
-                log.debug('Mote {0} not found in moteStates'.format(moteid))
-            return '{"result" : "fail"}'
+        
+        # disable toggleDAGroot function
+        
+        print "toggleDAGroot function disabled"
+        
+        return '{"result" : "success"}'
 
     def _getMoteData(self, moteid):
         '''
