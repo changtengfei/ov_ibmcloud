@@ -1,0 +1,1 @@
+web: scons runweb --opentestbed
